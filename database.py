@@ -16,7 +16,7 @@ def normalize_postgres_ssl(database_url: str) -> str:
     query.setdefault("sslmode", "require")
 
     if parsed.hostname and "cockroachlabs.cloud" in parsed.hostname and "sslrootcert" not in query:
-        query["sslrootcert"] = "system"
+        query["sslmode"] = "require"
 
     return urlunsplit(parsed._replace(query=urlencode(query)))
 
