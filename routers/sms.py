@@ -2,8 +2,8 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from pydantic import BaseModel
 from typing import Optional
-from ..database import get_db
-from ..models import SMSNotification
+from database import get_db
+from models import SMSNotification
 
 router = APIRouter(prefix="/sms", tags=["SMS Notifications"])
 

@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from ..database import get_db
-from ..models import Citizen, CitizenRequest, Report, TrainingRegistration, WiFiSession
+from database import get_db
+from models import Citizen, CitizenRequest, Report, TrainingRegistration, WiFiSession
 
 router = APIRouter(prefix="/analytics", tags=["Analytics"])
 

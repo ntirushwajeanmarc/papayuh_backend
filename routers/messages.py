@@ -2,8 +2,8 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from pydantic import BaseModel
 from typing import Optional
-from ..database import get_db
-from ..models import Message
+from database import get_db
+from models import Message
 
 router = APIRouter(prefix="/messages", tags=["Communication"])
 

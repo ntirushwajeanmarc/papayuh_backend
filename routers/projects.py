@@ -2,8 +2,8 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from pydantic import BaseModel
 from typing import Optional
-from ..database import get_db
-from ..models import CommunityProject, ProjectProgress
+from database import get_db
+from models import CommunityProject, ProjectProgress
 
 router = APIRouter(prefix="/projects", tags=["Community Projects"])
 
